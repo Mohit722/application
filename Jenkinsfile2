@@ -1,0 +1,16 @@
+pipeline {
+    agent any 
+    environment{
+        def param = readJSON file: 'some.json'
+        msg = "${param.Hello}"
+        deployTo = "${param.env}"
+        
+    }
+    stages{
+        stage('Echo'){
+            steps{
+                echo "${deployTo}"
+            }
+        }
+    }
+}
