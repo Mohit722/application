@@ -1,13 +1,15 @@
 pipeline{
   agent any
   enviroment{
-    def param = readJSON file: 'some.json'
-    msg = "${param.Hello}"
+    def value = readProperties file: 'some.properties'
+    person = "${value.name}"
+    deployTo = "${value.env}" 
   }
   stages{
-    stage('Echo'){
+    stage('echo name'){
       steps{
-        echo "$(msg)"
+        echo "${person}"
+        echo "${deployTo}
       }
     }
   }
