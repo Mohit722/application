@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment{
-        def param = readJSON file: 'some.json'
+        def param = readJSON file: 'dev.json'
         msg = "${param.Hello}"
         deployTo = "${param.env}"
         
