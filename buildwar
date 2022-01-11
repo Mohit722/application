@@ -20,7 +20,7 @@ sh "mvn clean package"
 stage('Build image'){
 steps{
 dir('sparkjava-war-example'){
-sh "docker build -f ../Dockerfile -t tomcatapp:latest"
+sh "docker build -f ../Dockerfile -t tomcatapp:latest ."
 }
 }
 }
