@@ -12,7 +12,7 @@ tools{
 maven 'M2'
 } 
 steps{
-dir ('sparkjava-war-example'){
+dir ('sparkjava-war-example1'){
 sh "mvn clean package"
 }
 }
