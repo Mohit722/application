@@ -3,7 +3,7 @@ agent any
 stages{
 stage('clone'){
 steps{
-sh "git clone https://github.com/kliakos/sparkjava-war-example.git"
+sh "git clone https://github.com/Mohit722/sparkjava-war-example.git"
 
 }
 }
@@ -12,7 +12,7 @@ tools{
 maven 'M2'
 } 
 steps{
-dir ('sparkjava-war-example1'){
+dir ('sparkjava-war-example'){
 sh "mvn clean package"
 }
 }
